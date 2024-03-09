@@ -5,13 +5,13 @@ import { ThemeToggleButton } from "./ThemeToggleButton";
 import LogoIcon from "../icons/Logo";
 ---
 
-<header class="transition-colors bg-zinc-50 dark:bg-zinc-600">
+<header class="py-2 transition-colors bg-zinc-50 dark:bg-zinc-600">
   <nav
-    class="flex items-center justify-between px-[2rem] md:px-[3rem] md:py-[1rem]"
+    class="flex justify-between items-center px-[2rem] md:px-[3rem] md:py-[1rem]"
   >
     <a href="/" class="flex gap-2 items-center">
       <LogoIcon
-        className="mb-3 text-[3rem] transition-colors text-zinc-900 dark:text-zinc-50"
+        className="transition-colors text-[2.4rem] text-zinc-900 dark:text-zinc-50"
       />
       <h2
         class="hidden transition-colors text-decoration-line: none; text-[1rem] md:block md:text-[1.5rem] font-bold text-zinc-900 dark:text-zinc-50"
@@ -20,7 +20,7 @@ import LogoIcon from "../icons/Logo";
       </h2>
     </a>
     <div class="flex items-center">
-      <div class="hidden md:flex gap-8 items-center mr-8">
+      <div class="hidden gap-8 items-center mr-8 md:flex">
         <HeaderLink href="/">Home</HeaderLink>
         <HeaderLink href="/blog">Blog</HeaderLink>
         <HeaderLink href="/about">About</HeaderLink>

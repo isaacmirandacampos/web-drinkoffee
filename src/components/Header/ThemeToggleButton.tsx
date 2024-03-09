@@ -78,9 +78,9 @@ const Toggle = (props: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
 
 const IsDark = ({ theme }: { theme: (typeof THEMES)[number] }) =>
   theme === "dark" && (
-    <IoMoon className="text-[1rem] transition-colors text-zinc-900 dark:text-zinc-50" />
+    <IoMoon className="transition-colors text-[1rem] text-zinc-900 dark:text-zinc-50" />
   );
 const IsLight = ({ theme }: { theme: (typeof THEMES)[number] }) =>
   theme === "light" && (
-    <IoSunny className="text-[1rem] transition-colors text-zinc-900 dark:text-zinc-50" />
+    <IoSunny className="transition-colors text-[1rem] text-zinc-900 dark:text-zinc-50" />
   );
