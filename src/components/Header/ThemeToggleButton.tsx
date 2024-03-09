@@ -42,7 +42,7 @@ export function ThemeToggleButton() {
     <div className="flex bg-orange-100 rounded-full dark:bg-gray-800">
       {!isMounted &&
         THEMES.map((t) => (
-          <Toggle>
+          <Toggle key={t}>
             <IsDark theme={t} />
             <IsLight theme={t} />{" "}
           </Toggle>
