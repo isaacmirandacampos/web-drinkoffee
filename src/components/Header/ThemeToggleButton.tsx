@@ -44,7 +44,7 @@ export function ThemeToggleButton() {
         THEMES.map((t) => (
           <span className="p-2 rounded-full transition-colors" key={t}>
             <IsDark theme={t} />
-            <IsLight theme={t} />{" "}
+            <IsLight theme={t} />
           </span>
         ))}
       {isMounted &&
