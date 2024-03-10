@@ -42,7 +42,7 @@ export function ThemeToggleButton() {
     <button
       type="button"
       onClick={toggleTheme}
-      className="flex p-0 rounded-full transition-colors dark:bg-orange-700 bg-zinc-700"
+      className="flex p-0 rounded-full transition-colors dark:bg-orange-700 bg-neutral-900"
     >
       {!isMounted &&
         THEMES.map((t) => (
@@ -58,7 +58,7 @@ export function ThemeToggleButton() {
             <span
               key={t}
               arial-label="Toggle theme"
-              className={`p-2 rounded-full transition-colors ${checked ? "bg-orange-600 dark:bg-gray-700 border border-orange-600 dark:border-orange-300" : ""}`}
+              className={`p-2 rounded-full transition-colors ${checked ? "bg-orange-600 dark:bg-neutral-900 border border-orange-600 dark:border-orange-300" : ""}`}
             >
               {t === "dark" && <Dark />}
               {t === "light" && <Light />}
