@@ -47,8 +47,8 @@ export function ThemeToggleButton() {
       {!isMounted &&
         THEMES.map((t) => (
           <span className="p-2 rounded-full transition-colors" key={t}>
-            {theme === "dark" && <Dark />}
-            {theme === "light" && <Light />}
+            {t === "dark" && <Dark />}
+            {t === "light" && <Light />}
           </span>
         ))}
       {isMounted &&
@@ -60,8 +60,8 @@ export function ThemeToggleButton() {
               arial-label="Toggle theme"
               className={`p-2 rounded-full transition-colors ${checked ? "bg-orange-600 dark:bg-gray-700 border border-orange-600 dark:border-orange-300" : ""}`}
             >
-              {theme === "dark" && <Dark />}
-              {theme === "light" && <Light />}
+              {t === "dark" && <Dark />}
+              {t === "light" && <Light />}
             </span>
           );
         })}
