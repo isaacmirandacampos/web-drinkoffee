@@ -115,8 +115,8 @@ export const TechnologySection = () => {
   };
 
   return (
-    <section className="bg-neutral-900 dark:bg-gray-300 py-10">
-      <h2 className="text-[2rem] md:text-[3rem] font-bold text-center transition-colors dark:text-orange-700 text-zinc-50">
+    <section className="py-10 dark:bg-gray-300 bg-neutral-900">
+      <h2 className="font-bold text-center transition-colors dark:text-orange-700 text-[2rem] text-zinc-50 md:text-[3rem]">
         Technologies
       </h2>
       <h3 className="text-lg text-center text-orange-600 transition-colors dark:text-gray-900">
@@ -130,7 +130,7 @@ export const TechnologySection = () => {
           >
             <button
               onClick={() => toggleMoreInformation(technology)}
-              className="p-2 w-full cursor-pointer"
+              className="p-2 w-full cursor-pointer mt-[.5rem]"
             >
               <div className="flex justify-center">
                 {
@@ -140,7 +140,7 @@ export const TechnologySection = () => {
                   />
                 }
               </div>
-              <h3 className="text-md font-bold transition-colors text-zinc-800 dark:text-zinc-100">
+              <h3 className="font-bold transition-colors mt-[.5rem] text-md text-zinc-800 dark:text-zinc-100">
                 {technology.title}
               </h3>
             </button>
