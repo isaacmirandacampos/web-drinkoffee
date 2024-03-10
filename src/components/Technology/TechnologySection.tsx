@@ -115,18 +115,18 @@ export const TechnologySection = () => {
   };
 
   return (
-    <section className="bg-zinc-900 dark:bg-zinc-400">
-      <h2 className="text-2xl font-bold text-center transition-colors dark:text-orange-700 text-zinc-50">
+    <section className="bg-neutral-900 dark:bg-gray-300 py-10">
+      <h2 className="text-[2rem] md:text-[3rem] font-bold text-center transition-colors dark:text-orange-700 text-zinc-50">
         Technologies
       </h2>
-      <h3 className="text-lg text-center text-orange-600 transition-colors dark:text-zinc-50">
+      <h3 className="text-lg text-center text-orange-600 transition-colors dark:text-gray-900">
         Some of the technologies I have worked with.
       </h3>
-      <ul className="grid grid-cols-2 gap-1 py-9 mx-1 sm:grid-cols-3 md:grid-cols-4 md:gap-2 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10 md:mx-[8rem]">
+      <ul className="grid grid-cols-2 gap-4 py-9 mx-1 sm:grid-cols-3 md:grid-cols-4 md:gap-4 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10 md:mx-[8rem]">
         {TECHNOLOGIES.map((technology) => (
           <li
             key={technology.title}
-            className="rounded border transition-colors hover:bg-orange-300 bg-zinc-50 border-zinc-600 dark:bg-zinc-600 dark:border-zinc-50 hover:dark:bg-orange-800"
+            className="rounded border transition-colors hover:bg-orange-300 bg-slate-100 border-neutral-600 dark:bg-neutral-900 dark:border-zinc-50 hover:dark:bg-orange-800"
           >
             <button
               onClick={() => toggleMoreInformation(technology)}
@@ -140,7 +140,7 @@ export const TechnologySection = () => {
                   />
                 }
               </div>
-              <h3 className="text-xl font-bold transition-colors text-zinc-800 dark:text-zinc-100">
+              <h3 className="text-md font-bold transition-colors text-zinc-800 dark:text-zinc-100">
                 {technology.title}
               </h3>
             </button>
