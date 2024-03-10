@@ -13,7 +13,7 @@ import { TechnologySection } from '../components/Technology/TechnologySection';
   <body class="transition-colors bg-slate-100 dark:bg-neutral-900">
     <Header />
     <main>
-      <section class="flex relative justify-center items-center mb-6 h-80 bg-neutral-900">
+      <section class="flex relative justify-center items-center mb-6 h-[60dvh] bg-neutral-900 sm:h-[70dvh]">
         <div class="overflow-hidden absolute w-full h-full opacity-50 transition-all dark:opacity-50 dark:bg-neutral-900">
           <img
             src="/calm-home.jpg"
@@ -27,14 +27,11 @@ import { TechnologySection } from '../components/Technology/TechnologySection';
           >
             Welcome!
           </h2>
-          <h1 class="font-bold text-center sm:text-3xl text-[1.2rem] text-slate-100">
-            This is a personal website, I write about of what I like and a
-            little bit about me.
-          </h1>
+          <h1 class="font-bold text-center sm:text-3xl text-[1.2rem] text-slate-100">I write about of what I like and a little bit about me.</h1>
         </div>
       </section>
-      <section class="my-[56px]">
-        <h3 class="text-xl font-bold text-center text-orange-700 transition-colors dark:text-zinc-300">
+      <section class="h-[calc(40dvh-84px)] sm:h-[calc(30dvh-84px)] md:h-[calc(30dvh-120px)] flex flex-col justify-center">
+        <h3 class="text-xl font-bold text-center text-orange-700 align-middle transition-colors dark:text-zinc-300">
           I'm a software developer.
         </h3>
         <p

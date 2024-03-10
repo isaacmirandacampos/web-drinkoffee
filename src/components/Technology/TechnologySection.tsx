@@ -111,14 +111,16 @@ const TECHNOLOGIES = [
   },
   {
     title: "Opensearch",
-    descriopion: "OpenSearch is the flexible, scalable, open-source way to build solutions for data-intensive applications.",
+    descriopion:
+      "OpenSearch is the flexible, scalable, open-source way to build solutions for data-intensive applications.",
     Icon: SiOpensearch,
   },
   {
     title: "DynamoDB",
-    description: "Amazon DynamoDB is a serverless, NoSQL, fully managed database service with single-digit millisecond response times at any scale, enabling you to develop and run modern applications while only paying for what you use.",
-    Icon: SiAmazondynamodb
-  }
+    description:
+      "Amazon DynamoDB is a serverless, NoSQL, fully managed database service with single-digit millisecond response times at any scale, enabling you to develop and run modern applications while only paying for what you use.",
+    Icon: SiAmazondynamodb,
+  },
 ];
 
 export const TechnologySection = () => {
