@@ -14,12 +14,12 @@ import LogoIcon from "../icons/Logo";
         className="mb-2 transition-colors dark:text-orange-700 text-[2.0rem] text-zinc-900"
       />
       <div
-        class="gap-2 hidden transition-colors text-decoration-line: none; text-[1rem] md:flex md:text-[1.5rem] font-bold text-zinc-600 dark:text-zinc-50"
+        class="gap-2 transition-colors text-decoration-line: none; text-[1rem] md:flex md:text-[1.5rem] font-bold text-zinc-600 dark:text-zinc-50"
       >
-        <h2 class="transition-colors dark:text-orange-700 text-zinc-900">
+        <h2 class="hidden md:block transition-colors dark:text-orange-700 text-zinc-900">
           {SITE_TITLE}
         </h2>
-        <span>by</span>
+        <span class="hidden md:block">by</span>
         <h2 class="text-orange-700 transition-colors dark:text-zinc-100">
           {AUTHOR_NAME}
         </h2>
@@ -28,7 +28,6 @@ import LogoIcon from "../icons/Logo";
     <div class="flex items-center">
       <div class="hidden gap-8 items-center mr-8 md:flex">
         <HeaderLink client:only href="/">Home</HeaderLink>
-        <HeaderLink client:only href="/teste">Blog</HeaderLink>
       </div>
       <ThemeToggleButton client:load />
     </div>
