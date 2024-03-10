@@ -43,8 +43,8 @@ export function ThemeToggleButton() {
       {!isMounted &&
         THEMES.map((t) => (
           <span className="p-2 rounded-full transition-colors" key={t}>
-            <IsDark theme={t} />
-            <IsLight theme={t} />
+            {theme === "dark" && <Dark />}
+            {theme === "light" && <Light />}
           </span>
         ))}
       {isMounted &&
@@ -56,8 +56,8 @@ export function ThemeToggleButton() {
               arial-label="Toggle theme"
               className={`p-2 rounded-full transition-colors ${checked ? "bg-orange-600 dark:bg-gray-700 border border-orange-600 dark:border-orange-300" : ""}`}
             >
-              <IsDark theme={t} />
-              <IsLight theme={t} />
+              {theme === "dark" && <Dark />}
+              {theme === "light" && <Light />}
             </span>
           );
         })}
@@ -65,11 +65,8 @@ export function ThemeToggleButton() {
   );
 }
 
-const IsDark = ({ theme }: { theme: (typeof THEMES)[number] }) =>
-  theme === "dark" && (
-    <IoMoon className="transition-colors text-[1rem] text-zinc-100 dark:text-zinc-50" />
-  );
-const IsLight = ({ theme }: { theme: (typeof THEMES)[number] }) =>
-  theme === "light" && (
-    <IoSunny className="transition-colors text-[1rem] text-zinc-900 dark:text-zinc-50" />
-  );
+const Dark = () =>
+  <IoMoon className="transition-colors text-[1rem] text-zinc-100 dark:text-zinc-50" />
+
+const Light = () =>
+  <IoSunny className="transition-colors text-[1rem] text-zinc-900 dark:text-zinc-50" />
