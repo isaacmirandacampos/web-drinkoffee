@@ -39,7 +39,7 @@ export function ThemeToggleButton() {
   }, []);
 
   return (
-    <Toggle onClick={toggleTheme} className="flex p-0 bg-zinc-700 rounded-full dark:bg-orange-700">
+    <button type="button" onClick={toggleTheme} className="flex p-0 bg-zinc-700 rounded-full transition-colors dark:bg-orange-700">
       {!isMounted &&
         THEMES.map((t) => (
           <span className="p-2 rounded-full transition-colors" key={t}>
@@ -61,19 +61,9 @@ export function ThemeToggleButton() {
             </span>
           );
         })}
-    </Toggle>
+    </button>
   );
 }
-
-const Toggle = (props: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
-  <button
-    type="button"
-    {...props}
-    className={`p-2 rounded-full transition-colors cursor-pointer ${props.className && props.className}`}
-  >
-    {props.children}
-  </button>
-);
 
 const IsDark = ({ theme }: { theme: (typeof THEMES)[number] }) =>
   theme === "dark" && (
