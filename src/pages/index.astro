@@ -3,6 +3,11 @@ import Header from "../components/Header/Header.astro";
 import BaseHead from "../components/BaseHead.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 import Footer from "../components/Footer.astro";
+import { getCollection } from "astro:content";
+
+const technologies = (await getCollection("technology")).sort(
+  (a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf(),
+);
 ---
 
 <html lang="en">
@@ -39,6 +44,32 @@ import Footer from "../components/Footer.astro";
           I'm a software developer.<br /> My career starts in January 2020, but I've
           been coding since 2018.
         </p>
+      </section>
+      <section>
+        <h2 class="text-2xl font-bold text-center transition-colors text-zinc-900 dark:text-zinc-100">
+          Technologies
+        </h2>
+        <ul class="mx-[8rem] flex gap-3">
+          {technologies.map((technology) => (
+            <li class="p-2 my-4 w-40 text-center rounded border transition-colors bg-zinc-50 border-zinc-600 dark:bg-zinc-600 hover:bg-zinc-200 dark:border-zinc-50 hover:dark:bg-zinc-800" key={technology.url}>
+              <a href={technology.url} class="cursor-pointer">
+                <div>
+                  <img
+                    src={technology.data.image}
+                    alt={technology.data.title}
+                    object-cover
+                    class="mx-auto w-20 h-20 rounded-full" />
+                </div>
+                <h3 class="text-xl font-bold transition-colors text-zinc-800 dark:text-zinc-100">
+                    {technology.data.title}
+                </h3>
+                <p class="transition-colors text-zinc-700 dark:text-zinc-300">
+                  {technology.data.description}
+                </p>
+              </a>
+            </li>
+          ))}
+        </ul>
       </section>
     </main>
     <Footer />
