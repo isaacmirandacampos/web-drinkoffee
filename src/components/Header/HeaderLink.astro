@@ -9,12 +9,12 @@ const { pathname } = Astro.url;
 const subpath = pathname.match(/[^\/]+/g);
 const isActive = href === pathname || href === "/" + subpath?.[0];
 
-const bold = isActive ? "font-bold" : "";
+const isSelected = isActive ? "font-bold text-orange-700 dark:text-orange-600" : "";
 ---
 
 <a
   href={href}
-  class={`text-zinc-900 dark:text-zinc-50 ${bold} transition-colors`}
+  class={`text-zinc-900 dark:text-zinc-50 ${isSelected} transition-colors`}
 >
   <slot />
 </a>

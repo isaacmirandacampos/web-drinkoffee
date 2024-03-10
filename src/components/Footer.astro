@@ -1,10 +1,11 @@
 ---
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 const today = new Date();
+import { AUTHOR_NAME  }  from '../consts.ts'
 ---
 
 <footer class="text-center transition-colors text-zinc-900 dark:text-zinc-100">
-  &copy; {today.getFullYear()} Isaac de Miranda Campos. All rights reserved.
+  &copy; {today.getFullYear()} { AUTHOR_NAME }. All rights reserved.
   <div class="flex gap-2 justify-center mt-2">
     <a
       href="https://www.linkedin.com/in/isaacmirandacampos/"

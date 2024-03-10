@@ -1,6 +1,6 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
-import { SITE_TITLE } from "../../consts";
+import { SITE_TITLE, AUTHOR_NAME } from "../../consts";
 import { ThemeToggleButton } from "./ThemeToggleButton";
 import LogoIcon from "../icons/Logo";
 ---
@@ -11,13 +11,19 @@ import LogoIcon from "../icons/Logo";
   >
     <a href="/" class="flex gap-2 items-center">
       <LogoIcon
-        className="transition-colors text-[2.4rem] text-zinc-900 dark:text-zinc-50"
+        className="mb-2 transition-colors dark:text-orange-700 text-[2.0rem] text-zinc-900"
       />
-      <h2
-        class="hidden transition-colors text-decoration-line: none; text-[1rem] md:block md:text-[1.5rem] font-bold text-zinc-900 dark:text-zinc-50"
+      <div
+        class="gap-2 hidden transition-colors text-decoration-line: none; text-[1rem] md:flex md:text-[1.5rem] font-bold text-zinc-600 dark:text-zinc-50"
       >
-        {SITE_TITLE}
-      </h2>
+        <h2 class="transition-colors dark:text-orange-700 text-zinc-900">
+          {SITE_TITLE}
+        </h2>
+        <span>by</span>
+        <h2 class="text-orange-700 transition-colors dark:text-zinc-100">
+          {AUTHOR_NAME}
+        </h2>
+      </div>
     </a>
     <div class="flex items-center">
       <div class="hidden gap-8 items-center mr-8 md:flex">

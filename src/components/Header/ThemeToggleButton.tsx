@@ -39,30 +39,29 @@ export function ThemeToggleButton() {
   }, []);
 
   return (
-    <div className="flex bg-orange-100 rounded-full dark:bg-gray-800">
+    <Toggle onClick={toggleTheme} className="flex p-0 bg-zinc-700 rounded-full dark:bg-orange-700">
       {!isMounted &&
         THEMES.map((t) => (
-          <Toggle key={t}>
+          <span className="p-2 rounded-full transition-colors" key={t}>
             <IsDark theme={t} />
             <IsLight theme={t} />{" "}
-          </Toggle>
+          </span>
         ))}
       {isMounted &&
         THEMES.map((t) => {
           const checked = t === theme;
           return (
-            <Toggle
+            <span
               key={t}
-              onClick={toggleTheme}
               arial-label="Toggle theme"
-              className={`p-2 rounded-full transition-colors cursor-pointer ${checked ? "bg-orange-400 dark:bg-gray-400" : ""}`}
+              className={`p-2 rounded-full transition-colors ${checked ? "bg-orange-600 dark:bg-gray-700 border border-orange-600 dark:border-orange-300" : ""}`}
             >
               <IsDark theme={t} />
               <IsLight theme={t} />
-            </Toggle>
+            </span>
           );
         })}
-    </div>
+    </Toggle>
   );
 }
 
@@ -78,7 +77,7 @@ const Toggle = (props: React.ButtonHTMLAttributes<HTMLButtonElement>) => (
 
 const IsDark = ({ theme }: { theme: (typeof THEMES)[number] }) =>
   theme === "dark" && (
-    <IoMoon className="transition-colors text-[1rem] text-zinc-900 dark:text-zinc-50" />
+    <IoMoon className="transition-colors text-[1rem] text-zinc-100 dark:text-zinc-50" />
   );
 const IsLight = ({ theme }: { theme: (typeof THEMES)[number] }) =>
   theme === "light" && (
