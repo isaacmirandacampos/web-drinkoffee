@@ -1,11 +1,11 @@
 ---
-import HeaderLink from "./HeaderLink.astro";
+import { HeaderLink } from "./HeaderLink";
 import { SITE_TITLE, AUTHOR_NAME } from "../../consts";
 import { ThemeToggleButton } from "./ThemeToggleButton";
 import LogoIcon from "../icons/Logo";
 ---
 
-<header class="py-2 transition-colors bg-zinc-50 dark:bg-zinc-600">
+<header class="py-2 transition-colors bg-slate-100 dark:bg-neutral-900">
   <nav
     class="flex justify-between items-center px-[2rem] md:px-[3rem] md:py-[1rem]"
   >
@@ -27,7 +27,8 @@ import LogoIcon from "../icons/Logo";
     </a>
     <div class="flex items-center">
       <div class="hidden gap-8 items-center mr-8 md:flex">
-        <HeaderLink href="/">Home</HeaderLink>
+        <HeaderLink client:only href="/">Home</HeaderLink>
+        <HeaderLink client:only href="/teste">Blog</HeaderLink>
       </div>
       <ThemeToggleButton client:load />
     </div>
