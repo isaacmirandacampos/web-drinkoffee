@@ -122,7 +122,7 @@ export const TechnologySection = () => {
       <h3 className="text-lg text-center text-orange-600 transition-colors dark:text-zinc-50">
         Some of the technologies I have worked with.
       </h3>
-      <ul className="grid gap-1 md:gap-2 mx-1 py-9 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10 md:mx-[8rem]">
+      <ul className="grid grid-cols-2 gap-1 py-9 mx-1 sm:grid-cols-3 md:grid-cols-4 md:gap-2 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10 md:mx-[8rem]">
         {TECHNOLOGIES.map((technology) => (
           <li
             key={technology.title}

@@ -39,7 +39,11 @@ export function ThemeToggleButton() {
   }, []);
 
   return (
-    <button type="button" onClick={toggleTheme} className="flex p-0 bg-zinc-700 rounded-full transition-colors dark:bg-orange-700">
+    <button
+      type="button"
+      onClick={toggleTheme}
+      className="flex p-0 rounded-full transition-colors dark:bg-orange-700 bg-zinc-700"
+    >
       {!isMounted &&
         THEMES.map((t) => (
           <span className="p-2 rounded-full transition-colors" key={t}>
@@ -65,8 +69,10 @@ export function ThemeToggleButton() {
   );
 }
 
-const Dark = () =>
+const Dark = () => (
   <IoMoon className="transition-colors text-[1rem] text-zinc-100 dark:text-zinc-50" />
+);
 
-const Light = () =>
+const Light = () => (
   <IoSunny className="transition-colors text-[1rem] text-zinc-900 dark:text-zinc-50" />
+);
