@@ -2,6 +2,7 @@
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     "jsx": "react",
-    "strictNullChecks": true
+    "strictNullChecks": true,
+    "verbatimModuleSyntax": false
   }
 }

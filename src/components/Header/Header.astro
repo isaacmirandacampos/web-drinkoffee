@@ -1,5 +1,4 @@
 ---
-import { HeaderLink } from "./HeaderLink";
 import { SITE_TITLE, AUTHOR_NAME } from "../../consts";
 import { ThemeToggleButton } from "./ThemeToggleButton";
 import LogoIcon from "../icons/Logo";
@@ -26,9 +25,6 @@ import LogoIcon from "../icons/Logo";
       </div>
     </a>
     <div class="flex items-center">
-      <div class="hidden gap-8 items-center mr-8 md:flex">
-        <HeaderLink client:only href="/">Home</HeaderLink>
-      </div>
       <ThemeToggleButton client:load />
     </div>
   </nav>

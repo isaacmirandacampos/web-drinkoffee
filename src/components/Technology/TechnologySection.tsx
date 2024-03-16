@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import {
   SiAmazonaws,
   SiAmazondynamodb,
@@ -19,7 +19,8 @@ import {
   SiTerraform,
   SiTypescript,
 } from "react-icons/si";
-
+import { useIsVisible } from "../../utils/UseIsVisibleAnimation";
+import { List } from "./List";
 const TECHNOLOGIES = [
   {
     title: "Javascript",
@@ -127,7 +128,8 @@ export const TechnologySection = () => {
   const toggleMoreInformation = (technology: (typeof TECHNOLOGIES)[number]) => {
     console.log(technology);
   };
-
+  const ref = useRef<HTMLUListElement>(null);
+  const isVisible = useIsVisible(ref);
   return (
     <section className="py-10 dark:bg-gray-300 bg-neutral-900">
       <h2 className="font-bold text-center transition-colors dark:text-orange-700 text-[2rem] text-zinc-50 md:text-[3rem]">
@@ -136,7 +138,7 @@ export const TechnologySection = () => {
       <h3 className="text-lg text-center text-orange-600 transition-colors dark:text-gray-900">
         Some of the technologies I have worked with.
       </h3>
-      <ul className="grid grid-cols-2 gap-1 lg:gap-4 py-9 mx-1 sm:grid-cols-3 md:grid-cols-4 md:gap-4 lg:grid-cols-6 xl:grid-cols-8 2xl:grid-cols-10 md:mx-[8rem]">
+      <List isVisible={isVisible} ref={ref}>
         {TECHNOLOGIES.map((technology) => (
           <li
             key={technology.title}
@@ -160,7 +162,7 @@ export const TechnologySection = () => {
             </button>
           </li>
         ))}
-      </ul>
+      </List>
     </section>
   );
 };
