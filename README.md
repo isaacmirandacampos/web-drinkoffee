@@ -1,8 +1,8 @@
-# It's my personal website
+# It's my personal website | Drinkoffee
 
-Created with astro to training my skills, and to have a place to share my thoughts and projects.
+Created with Astro to train my skills, and to have a place to share my thoughts and projects.
 
-Initially I'm started the project to learn about Astro and TailwindCSS to understand the technologies, but then I liked the idea of using the project for a portfolio.
+Initially I started the project to learn about Astro and TailwindCSS to understand the technologies, but then I liked the idea of using the project for a portfolio.
 
 ## Technologies used
 
@@ -10,9 +10,9 @@ Initially I'm started the project to learn about Astro and TailwindCSS to unders
 - TailwindCSS
 - TypeScript
 
-## Deploy
+## Deployed
 
-The website is deployed on Netlify, and you can access it [here](https://www.drinkoffee.com)
+The website is hosted on Netlify, and can be accessed [here](https://www.drinkoffee.com)
 
 ## How to run
 
@@ -20,3 +20,7 @@ The website is deployed on Netlify, and you can access it [here](https://www.dri
 npm install
 npm run dev
 ```
+
+## In progress
+
+I am now working on other personal content to add more information to my website. Most of the content about my work is included in professional jobs.
